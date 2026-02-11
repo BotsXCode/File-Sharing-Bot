@@ -1,4 +1,4 @@
-#(©)Codexbotz
+#(©)botsXCode
 #@iryme
 
 from aiohttp import web
