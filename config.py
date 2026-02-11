@@ -1,4 +1,4 @@
-#(©)CodeXBotz
+#(©)BotsXCode
 
 import os
 import logging
@@ -27,7 +27,7 @@ PORT = os.environ.get("PORT", "8080")
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "")
-DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
+DB_NAME = os.environ.get("DATABASE_NAME", "@BotsXCode")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
@@ -36,8 +36,48 @@ JOIN_REQUEST_ENABLE = os.environ.get("JOIN_REQUEST_ENABLED", None)
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_PIC = os.environ.get("START_PIC","")
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_PIC = os.environ.get("START_PIC","https://drive.google.com/file/d/18-cbiCX7W0CxNmnnIkn8L0HmR77xXfwp/view?usp=sharing")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI ━━━━━━━━━━━━━━━━━━
+👋 Welcome to 𝐀𝐍𝐈𝐌𝐄 𝐅𝐄𝐒𝐓𝐈𝐕𝐀𝐋𝐒 𝐅𝐈𝐋𝐄 𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐁𝐎𝐓
+━━━━━━━━━━━━━━━━━━
+
+✨ Here you can store & share files safely with ultra fast access.
+
+📌 What I Can Do:
+● Generate secure file links
+● Store videos, documents & media
+● Share files instantly to anyone
+● Provide smooth & fast downloads
+
+🔒 Safety Notice:
+Your files are not public unless you share the link.
+We do not edit, delete, or misuse your content.
+
+🌟 Enjoy Fast & Secure File Sharing!
+Powered By: 𝐀𝐍𝐈𝐌𝐄 GATEWAY
+━━━━━━━━━━━━━━━━━━
+🔥 Extra Premium Version (More “Official”)
+━━━━━━━━━━━━━━━━━━
+🎬 ANIME GATEWAY | 𝐅𝐈𝐋𝐄 𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐁𝐎𝐓
+━━━━━━━━━━━━━━━━━━
+
+Welcome! 👋
+This bot is designed for fast, secure, and simple file sharing.
+
+📂 Supported: Video • Document • Audio • Photo
+⚡ Fast Link Generation
+🔐 Safe Storage System
+📌 Easy Sharing
+
+🔒 Privacy & Safety:
+Your files remain safe.
+Only users with your link can access them.
+
+📤 Send a file now to get started!
+
+━━━━━━━━━━━━━━━━━━
+✨ Maintained By: @BotsXCode
+━━━━━━━━━━━━━━━━━━.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -46,24 +86,41 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>🔒 ACCESS DENIED
+
+Join our channel to use this bot.
+Then click /start again.
+</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", {Filename})
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
 
 # Auto delete time in seconds.
-AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "0"))
-AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "This file will be automatically deleted in {time} seconds. Please ensure you have saved any necessary content before this time.")
+AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "300"))
+AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "❗️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ❗️
+
+Tʜɪs Fɪʟᴇ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 5 minutes minutes (Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs)
+📌 Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ Tᴏ Sᴏᴍᴇᴡʜᴇʀᴇ Eʟsᴇ Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅɪɴɢ Tʜᴇʀᴇ.
+
+𝙁𝙤𝙧 🤖 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Gateway
+𝙁𝙤𝙧 📚 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Gateway")
 AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted. Thank you for using our service. ✅")
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
+USER_REPLY_TEXT = "⚠️ AUTO REPLY
+
+Do not DM again.
+This is an automated account.
+
+Messages will be ignored.
+Use bot commands / support group.
+"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
