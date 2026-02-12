@@ -7,7 +7,7 @@
   <a href="https://t.me/BotsXCode">
     <img src="https://github.com/BotsXCode/PyrogramGenStr/blob/main/resources/madebycodex-badge.svg" width="250">
   </a><br>
-  <a href="https://t.me/CodeXBotz">
+  <a href="https://t.me/BotsXCode">
     &nbsp;<img src="https://t.me/BotsXCode" width="130" height="18">&nbsp;
   </a>
   <a href="https://t.me/codexbotzsupport">
